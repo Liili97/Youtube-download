@@ -1,0 +1,24 @@
+services:
+    python:
+        image: youtubeimage:latest
+        volumes:
+        - ./app:/usr/src/app
+        stdin_open: true 
+        tty: true
+        command: python stats.py
+
+
+
+#$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp python:3-alpine python hola.py
+#-it: interaccion 
+#--rm: borro el contenedor cuando acabe
+#-v: volumen  antes de los dos puntos es la ruta ficticia:ruta real de la maquina 
+#-w: workdir---> ruta
+
+
+#Loguearse
+#   docker login
+#Etiquetar repositorio
+#   docker tag localname:localtag user/repo:tag
+#Subir la imagen
+#   docker push user/repo:tag
