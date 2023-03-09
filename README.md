@@ -42,7 +42,7 @@ services:
         stdin_open: true 
         tty: true
         command: python stats.py
-``
+```
 ---
 #DOCKERFILE
 ---
